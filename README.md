@@ -2,7 +2,7 @@
 
 This is React Native app based on the technical test set out by Yomento. The app aims to recreate the home page of the current Yomento app, including the scroll functionality of the small and large image containers.
 
-![Image of app] (https://i.imgur.com/MDAV0AA.jpg)
+![Image of working app](https://i.imgur.com/MDAV0AA.jpg)
 
 **Built on**
 
