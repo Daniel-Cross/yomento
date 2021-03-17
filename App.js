@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { ScrollView } from "react-native";
+import Navbar from "./components/Navbar";
+import Progress from "./components/Progress";
+import SmallScroll from "./components/SmallScroll";
+import LargeScroll from "./components/LargeScroll";
+import { AppContainer, colors } from "./constants/styles";
+import { LinearGradient } from "expo-linear-gradient";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <ScrollView>
+        <AppContainer>
+          <LinearGradient
+            colors={colors}
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: -200,
+              height: "200%",
+            }}
+          />
+          <Progress />
+          <SmallScroll />
+          <LargeScroll />
+        </AppContainer>
+      </ScrollView>
+      <Navbar />
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
